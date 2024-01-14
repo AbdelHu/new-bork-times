@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florbes - a global media company, focusing on business, investing, technology, entrepreneurship, leadership, and lifestyle</title>
+    
+    <style>
+        main {
+            display: flex;
+            text-align: center;
+            flex-flow: column wrap;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 100px;
+            text-align: center;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            
+            text-decoration: underline 1px rgb(159, 159, 159) solid;
+        }
+
+        .form-input {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+            width: 20%;
+            height: 30px;
+            outline: none;
+            border: 1.5px black solid;
+            font-size: 100%;
+            
+            margin: 0px 0px 5px 0px;
+            
+            padding: 0px 10px 0px 15px;
+            border-radius: 20px;
+            
+            transition: all 0.1s ease-in-out;
+        }
+
+        .form-input:hover {
+            background-color: rgb(245, 245, 245);
+        }
+
+        #login-button {
+            margin: 10px 0px 0px 0px;
+            width: 20%;
+            height: 30px;
+            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #login-button:hover {
+            cursor: pointer;
+            
+            letter-spacing: 2px;
+            width: 21.75%;
+        }
+        
+        #error-msg {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 5px;
+            
+            font-style: italic;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1 class="title">New Bork Times</h1>
+        </div>
+        <div>
+            <form id="form">
+                <div id="error-msg"></div>
+                
+                <div>
+                    <input class="form-input" type="text" id="email" title="Enter email" placeholder="Enter your email here...">
+                </div>
+                
+                <div>
+                    <input class="form-input" type="text" id="password" title="Enter password" placeholder="Enter your password here...">
+                </div>
+                
+                <div>
+                    <input class="form-input" type="text" id="re-enter-password" title="Re-enter password" placeholder="Re-enter your password here...">
+                </div>
+            </form>
+            
+            <div>
+                <button class="form-input" id="login-button" title="Log in" onclick="errorMessage()"> LOG IN </button>
+            </div>
+            
+        </div>
+    </main>
+        
+    </div>
+    
+    <script>
+        let errorText = document.getElementById("error-msg");
+        
+        function errorMessage() {
+            errorText.textContent = "Incorrect password format.";
+        }
+    </script>
+</body>
+</html>
